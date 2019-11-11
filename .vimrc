@@ -109,6 +109,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'terryma/vim-multiple-cursors'
   Plug 'morhetz/gruvbox'
   Plug 'tpope/vim-rails'
+  Plug 'flowtype/vim-flow'
 call plug#end()
 
 " CtrlP
