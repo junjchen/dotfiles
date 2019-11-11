@@ -3,4 +3,6 @@ alias l="ll"
 
 set -g theme_color_scheme gruvbox
 
-source (brew --prefix asdf)/asdf.fish
+if brew ls --versions asdf > /dev/null
+  source (brew --prefix asdf)/asdf.fish
+end
