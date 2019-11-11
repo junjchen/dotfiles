@@ -115,6 +115,7 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 
 " NERDTree
 map <leader>n :NERDTreeToggle<cr>
+map <leader>f :NERDTreeFind<cr>
 
 " Ack.vim
 if executable('ag')
