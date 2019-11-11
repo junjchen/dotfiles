@@ -54,6 +54,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set laststatus=2
 set showcmd
 
+set t_ti= t_te=
+
 let mapleader = ","
 
 map $ <nop>
@@ -109,7 +111,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " CtrlP
-let g:ctrlp_map="<c-f>"
+let g:ctrlp_map="<c-p>"
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 nnoremap <leader>b :CtrlPBuffer<cr>
 
@@ -122,11 +124,12 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 cnoreabbrev Ack Ack!
-nnoremap <leader>a :Ack!<space>
-vnoremap <leader>a y:Ack! <c-r>=fnameescape(@")<cr><cr>
+nnoremap <c-f> :Ack!<space>
+vnoremap <c-f> y:Ack! <c-r>=fnameescape(@")<cr><cr>
 
 " Ale
 let g:ale_fixers = { 'javascript': ['prettier'] }
+let g:ale_linters = { 'javascript': ['eslint', 'flow', 'flow-language-server'] }
 let g:ale_fix_on_save = 1
 
 " Airline
