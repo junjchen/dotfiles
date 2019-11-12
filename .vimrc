@@ -73,10 +73,11 @@ map <c-l> <c-W>l
 
 map <leader>w :w!<cr>
 map <silent> <leader><cr> :noh<cr>
+nnoremap <leader>b :e#<cr>
+nnoremap <leader>t :tabnext<cr>
+nnoremap <leader>x :bd<cr>
 nnoremap <space> /
 nnoremap Y y$
-map <leader>q :e ~/buffer<cr>
-map <leader>x :e ~/buffer.md<cr>
 command W w !sudo tee % > /dev/null
 
 function! HasPaste()
@@ -110,7 +111,9 @@ call plug#end()
 " CtrlP
 let g:ctrlp_map="<c-p>"
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-nnoremap <leader>b :CtrlPBuffer<cr>
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " NERDTree
 map <leader>n :NERDTreeToggle<cr>
@@ -134,3 +137,4 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Gruvbox
 colorscheme gruvbox
+
