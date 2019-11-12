@@ -102,7 +102,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'morhetz/gruvbox'
   Plug 'tpope/vim-rails'
@@ -132,11 +131,6 @@ let g:ale_fix_on_save = 1
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-
-" Gitgutter
-set updatetime=100
-nmap ]h <Plug>(GitGutterNextHunk)
-nmap [h <Plug>(GitGutterPrevHunk)
 
 " Gruvbox
 colorscheme gruvbox
