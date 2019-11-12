@@ -54,6 +54,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set laststatus=2
 set showcmd
 
+set shell=/bin/bash\ --login
+set shellcmdflag=-c
+
 let mapleader = ","
 
 map $ <nop>
