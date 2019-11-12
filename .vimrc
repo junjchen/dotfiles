@@ -54,8 +54,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set laststatus=2
 set showcmd
 
-set t_ti= t_te=
-
 let mapleader = ","
 
 map $ <nop>
