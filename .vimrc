@@ -122,6 +122,7 @@ endif
 " NERDTree
 map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
+let NERDTreeShowHidden = 1
 
 " Ack.vim
 if executable('ag')
@@ -138,6 +139,7 @@ let g:ale_fix_on_save = 1
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Gruvbox
 colorscheme gruvbox
