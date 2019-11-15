@@ -1,7 +1,3 @@
-alias g="git"
-alias l="ll"
-alias v="vim"
-
 alias wm="~/repos/wolfman/bin/wolfman"
 alias be="bundle exec"
 
