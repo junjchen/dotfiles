@@ -110,6 +110,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'tpope/vim-rails'
   Plug 'flowtype/vim-flow'
+  Plug 'ervandew/supertab'
 call plug#end()
 
 " CtrlP
@@ -143,4 +144,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Gruvbox
 colorscheme gruvbox
+
+" Supertab
+let g:SuperTabDefaultCompletionType = 'context'
 
