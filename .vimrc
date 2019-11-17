@@ -57,6 +57,8 @@ set showcmd
 set shell=/bin/bash\ --login
 set shellcmdflag=-c
 
+set tags=./tags;
+
 let mapleader = ","
 
 map $ <nop>
