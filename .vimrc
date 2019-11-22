@@ -143,6 +143,7 @@ let g:ale_fix_on_save = 1
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_theme = 'dark'
 
 " Gruvbox
 colorscheme gruvbox
