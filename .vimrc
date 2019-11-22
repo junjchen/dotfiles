@@ -80,7 +80,7 @@ map <leader>w :w!<cr>
 map <silent> <leader><cr> :noh<cr>
 nnoremap <leader>b :e#<cr>
 nnoremap <leader>t :tabnext<cr>
-nnoremap <leader>x :bd<cr>
+nnoremap <leader>x :q<cr>
 nnoremap <space> /
 nnoremap Y y$
 command W w !sudo tee % > /dev/null
@@ -113,6 +113,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'flowtype/vim-flow'
   Plug 'ervandew/supertab'
+  Plug 'vim-scripts/mru.vim'
 call plug#end()
 
 " CtrlP
@@ -151,3 +152,5 @@ colorscheme gruvbox
 " Supertab
 let g:SuperTabDefaultCompletionType = 'context'
 
+" MRU.vim
+map <leader>m :MRU<cr>
