@@ -81,6 +81,8 @@ map <silent> <leader><cr> :noh<cr>
 nnoremap <leader>b :e#<cr>
 nnoremap <leader>t :tabnext<cr>
 nnoremap <leader>x :q<cr>
+nnoremap <leader>v :vsp<cr>
+nnoremap <leader>h :sp<cr>
 nnoremap <space> /
 nnoremap Y y$
 command W w !sudo tee % > /dev/null
