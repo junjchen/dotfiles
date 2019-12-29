@@ -116,6 +116,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'flowtype/vim-flow'
   Plug 'ervandew/supertab'
   Plug 'vim-scripts/mru.vim'
+  Plug 'yuezk/vim-js'
+  Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 " CtrlP
