@@ -78,7 +78,7 @@ map <c-l> <c-W>l
 
 map <leader>w :w!<cr>
 map <silent> <leader><cr> :noh<cr>
-nnoremap <leader>b :e#<cr>
+nnoremap <leader><leader> :b#<cr>
 nnoremap <leader>t :tabnext<cr>
 nnoremap <leader>x :q<cr>
 nnoremap <leader>v :vsp<cr>
