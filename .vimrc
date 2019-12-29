@@ -5,6 +5,7 @@ filetype plugin on
 filetype indent on
 
 set t_Co=256
+set background=dark
 
 set noerrorbells
 set vb t_vb=
