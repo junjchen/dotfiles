@@ -1,6 +1,7 @@
 alias wm="~/repos/wolfman/bin/wolfman"
 alias be="bundle exec"
 alias v="f -e vim"
+alias vg="vagrant"
 alias mctags="ag -l | ctags --links=no -L-"
 alias sjhome="source ~/.asdf/plugins/java/set-java-home.fish"
 
