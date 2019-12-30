@@ -3,7 +3,7 @@ sudo add-apt-repository ppa:aacebedo/fasd
 sudo apt-get update
 sudo apt-get -y install git curl silversearcher-ag fish fasd
 
-sudo chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish vagrant
 
 mkdir -p "$HOME/repos"
 
