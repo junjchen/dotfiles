@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-sudo apt-get update
-sudo apt-get -y install git curl
+apt-get update
+apt-get -y install git curl silversearcher-ag fish
+
+chsh -s /usr/bin/fish
 
 mkdir -p /home/vagrant/repos
 git clone https://github.com/junjchen/dotfiles.git /home/vagrant/repos/dotfiles
