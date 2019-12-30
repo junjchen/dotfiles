@@ -67,5 +67,5 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  config.vm.provision "shell", path: "https://raw.githubusercontent.com/junjchen/dotfiles/master/vg-provision.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/junjchen/dotfiles/master/vg-provision.sh", privileged: false
 end
