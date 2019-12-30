@@ -119,6 +119,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-scripts/mru.vim'
   Plug 'yuezk/vim-js'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'ocaml/vim-ocaml'
 call plug#end()
 
 " CtrlP
