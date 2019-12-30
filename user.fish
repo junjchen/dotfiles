@@ -8,6 +8,8 @@ alias sjhome="source ~/.asdf/plugins/java/set-java-home.fish"
 set -xg ECLIPSE_HOME "/Applications/Eclipse\ Java.app"
 alias eclimd="sh $ECLIPSE_HOME/Contents/Eclipse/eclimd"
 
+set -xg PATH $PATH (yarn global bin)
+
 set -g theme_color_scheme gruvbox
 
 source /usr/local/opt/asdf/asdf.fish
