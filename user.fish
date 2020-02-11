@@ -5,4 +5,6 @@ alias be="bundle exec"
 alias vv="f -e vim"
 
 set -g theme_color_scheme gruvbox
-set -xg PATH $PATH (yarn global bin)
+if command --search yarn >/dev/null do
+    set -xg PATH $PATH (yarn global bin)
+end
