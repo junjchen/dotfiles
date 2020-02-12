@@ -1,3 +1,5 @@
+fish_vi_key_bindings
+
 source /usr/local/opt/asdf/asdf.fish
 
 alias wm="~/repos/wolfman/bin/wolfman"
