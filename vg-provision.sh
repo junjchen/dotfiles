@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sudo add-apt-repository ppa:aacebedo/fasd
 sudo apt-get update
-sudo apt-get -y install git curl silversearcher-ag fish fasd
+sudo apt-get -y install git curl silversearcher-ag fish fasd tmux
 
 sudo chsh -s /usr/bin/fish vagrant
 
@@ -17,5 +17,5 @@ curl -L https://get.oh-my.fish > /tmp/install-omf
 
 fish /tmp/install-omf --noninteractive
 
-fish -c 'omf install fasd bobthefish https://github.com/jhillyerd/plugin-git'
+fish -c 'omf install fasd agnoster https://github.com/jhillyerd/plugin-git'
 
