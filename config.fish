@@ -6,7 +6,7 @@ alias vv="f -e vim"
 
 set -g theme_color_scheme gruvbox
 
-if test -e "~/.asdf/asdf.fish"
+if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
 end
 
