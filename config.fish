@@ -6,12 +6,12 @@ alias vv="f -e vim"
 
 set -g theme_color_scheme gruvbox
 
-if test -e /usr/local/opt/asdf/asdf.fish
-  source /usr/local/opt/asdf/asdf.fish
+if test -e "~/.asdf/asdf.fish"
+  source ~/.asdf/asdf.fish
 end
 
 if command --search yarn >/dev/null do
-    set -xg PATH $PATH (yarn global bin)
+  set -xg PATH $PATH (yarn global bin)
 end
 
 if command --search pritunlctl >/dev/null do
