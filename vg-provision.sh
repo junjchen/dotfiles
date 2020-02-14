@@ -14,6 +14,7 @@ cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 ln -s "$HOME/repos/dotfiles/.vimrc" "$HOME/.vimrc";
 ln -s "$HOME/repos/dotfiles/config.fish" "$HOME/.config/fish/config.fish";
 ln -s "$HOME/repos/dotfiles/.tmux.conf" "$HOME/.tmux.conf";
+ln -s "$HOME/repos/dotfiles/.tool-versions" "$HOME/.tool-versions";
 
 curl -L https://get.oh-my.fish > /tmp/install-omf
 
