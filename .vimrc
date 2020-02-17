@@ -22,6 +22,8 @@ set autoread
 set lazyredraw
 set hidden
 
+set re=1
+
 set tabstop=2
 set softtabstop=2
 set expandtab
@@ -118,8 +120,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ervandew/supertab'
   Plug 'vim-scripts/mru.vim'
   Plug 'yuezk/vim-js'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'HerringtonDarkholme/yats.vim'
   Plug 'ocaml/vim-ocaml'
 call plug#end()
 
@@ -144,7 +145,7 @@ nnoremap <c-f> :Ack!<space>
 vnoremap <c-f> y:Ack! <c-r>=fnameescape(@")<cr><cr>
 
 " Ale
-let g:ale_fixers = { 'javascript': ['prettier'] }
+let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'], 'typescriptreact': ['prettier']}
 let g:ale_linters = { 'javascript': ['eslint', 'flow', 'flow-language-server'], 'java': [] }
 let g:ale_fix_on_save = 1
 
