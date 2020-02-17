@@ -118,9 +118,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'ervandew/supertab'
   Plug 'vim-scripts/mru.vim'
   Plug 'yuezk/vim-js'
+  Plug 'leafgarland/typescript-vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'ocaml/vim-ocaml'
-  Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " CtrlP
