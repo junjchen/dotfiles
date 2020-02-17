@@ -3,6 +3,7 @@ fish_vi_key_bindings
 alias wm="~/repos/wolfman/bin/wolfman"
 alias be="bundle exec"
 alias vv="f -e vim"
+alias vg="vagrant"
 
 set -g theme_color_scheme gruvbox
 
