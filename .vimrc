@@ -120,6 +120,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'yuezk/vim-js'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'ocaml/vim-ocaml'
+  Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " CtrlP
