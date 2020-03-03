@@ -7,6 +7,8 @@ alias vg="vagrant"
 
 set -g theme_color_scheme solarized-dark
 
+set -g -x TERM "screen-256color"
+
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
 end
