@@ -5,7 +5,7 @@ alias be="bundle exec"
 alias vv="f -e vim"
 alias vg="vagrant"
 
-set -g theme_color_scheme gruvbox
+set -g theme_color_scheme solarized-dark
 
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
