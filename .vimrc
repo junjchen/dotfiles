@@ -123,6 +123,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'ocaml/vim-ocaml'
+  Plug 'christoomey/vim-tmux-navigatoR'
 call plug#end()
 
 " CtrlP
