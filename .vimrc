@@ -139,6 +139,25 @@ map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
 let NERDTreeShowHidden = 1
 
+" NERDTress File highlighting
+ function! NERDTreeHighlightFile(extension, fg, bg)
+  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg
+   exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+   endfunction
+   call NERDTreeHighlightFile('rb', 'red', 'none')
+   call NERDTreeHighlightFile('java', 'blue', 'none')
+   call NERDTreeHighlightFile('kt', 'magenta', 'none')
+   call NERDTreeHighlightFile('graphql', 'magenta', 'none')
+   call NERDTreeHighlightFile('js', 'green', 'none')
+   call NERDTreeHighlightFile('css', 'cyan', 'none')
+   call NERDTreeHighlightFile('scss', 'cyan', 'none')
+   call NERDTreeHighlightFile('html', 'yellow', 'none')
+   call NERDTreeHighlightFile('json', 'yellow', 'none')
+   call NERDTreeHighlightFile('yml', 'white', 'none')
+   call NERDTreeHighlightFile('md', 'white', 'none')
+   call NERDTreeHighlightFile('config', 'white', 'none')
+   call NERDTreeHighlightFile('xml', 'white', 'none')
+
 " Ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
