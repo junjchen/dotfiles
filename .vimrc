@@ -83,7 +83,7 @@ map <leader>w :w!<cr>
 map <silent> <leader><cr> :noh<cr>
 nnoremap <leader><leader> :b#<cr>
 nnoremap <leader>t :tabnext<cr>
-nnoremap <leader>x :q<cr>
+nnoremap <leader>x :bd<cr>
 nnoremap <leader>\ :vsp<cr>
 nnoremap <leader>- :sp<cr>
 nnoremap <space> /
