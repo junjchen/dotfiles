@@ -118,13 +118,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'flowtype/vim-flow'
   Plug 'ervandew/supertab'
-  Plug 'vim-scripts/mru.vim'
   Plug 'yuezk/vim-js'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'ocaml/vim-ocaml'
   Plug 'christoomey/vim-tmux-navigatoR'
+  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+  Plug 'Quramy/tsuquyomi'
 call plug#end()
 
 " CtrlP
@@ -133,6 +134,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+map <leader>b :CtrlPBuffer<cr>
+map <leader>m :CtrlPMRU<cr>
 
 " NERDTree
 map <leader>n :NERDTreeToggle<cr>
@@ -185,5 +188,6 @@ colorscheme gruvbox
 " Supertab
 let g:SuperTabDefaultCompletionType = 'context'
 
-" MRU.vim
-map <leader>m :MRU<cr>
+" tsuquyomi
+let g:tsuquyomi_disable_default_mappings = 1
+map <leader>t :TsuDefinition<cr>
