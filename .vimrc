@@ -123,9 +123,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'ocaml/vim-ocaml'
-  Plug 'christoomey/vim-tmux-navigatoR'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Quramy/tsuquyomi'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'udalov/kotlin-vim'
 call plug#end()
 
 " CtrlP
@@ -173,7 +174,7 @@ nnoremap <c-f> :Ack!<space>
 vnoremap <c-f> y:Ack! <c-r>=fnameescape(@")<cr><cr>
 
 " Ale
-let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'], 'typescriptreact': ['prettier']}
+let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'], 'typescriptreact': ['prettier'], 'sql': ['pgformatter']}
 let g:ale_linters = { 'javascript': ['eslint', 'flow', 'flow-language-server'], 'java': [] }
 let g:ale_fix_on_save = 1
 
