@@ -175,7 +175,7 @@ vnoremap <c-f> y:Ack! <c-r>=fnameescape(@")<cr><cr>
 
 " Ale
 let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'], 'typescriptreact': ['prettier'], 'sql': ['pgformatter']}
-let g:ale_linters = { 'javascript': ['eslint', 'flow', 'flow-language-server'], 'java': [] }
+let g:ale_linters = { 'javascript': ['eslint', 'flow', 'flow-language-server'], 'java': [], 'typescript': ['eslint'], 'typescriptreact': ['eslint'] }
 let g:ale_fix_on_save = 1
 
 " Airline
