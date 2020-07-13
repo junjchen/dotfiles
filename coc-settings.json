@@ -1,0 +1,14 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+      "java",
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "typescriptreact",
+      "json",
+      "graphql"
+    ],
+    "java.format.settings.url": "/home/vagrant/.vim/plugged/redhat.java/eclipse-formatter.xml",
+    "list.source.files.defaultOptions": ["--number-select"],
+    "list.source.files.args": ["--hidden", "--files"]
+}
