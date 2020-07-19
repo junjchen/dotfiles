@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+REACT_NATIVE_PACKAGER_HOSTNAME = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address
+
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
@@ -24,6 +26,11 @@ Vagrant.configure("2") do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
   # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
+  config.vm.network "forwarded_port", guest: 19000, host: 19000
+  config.vm.network "forwarded_port", guest: 19001, host: 19001
+  config.vm.network "forwarded_port", guest: 19002, host: 19002
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
@@ -49,13 +56,14 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+  config.vm.provider "virtualbox" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    # vb.gui = true
+
+    # Customize the amount of memory on the VM:
+    vb.memory = "4096"
+    vb.cpus = 2
+  end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -73,4 +81,11 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "scripts/omf_install.sh", privileged: false
   config.vm.provision "shell", path: "scripts/nodejs_install.sh", privileged: false
   config.vm.provision "shell", path: "scripts/nvim_install.sh", privileged: false
+
+  config.vm.provision "set_lan_ip", "type": "shell", privileged: false do |installs|
+    installs.inline = "
+      echo 'set -xg REACT_NATIVE_PACKAGER_HOSTNAME #{REACT_NATIVE_PACKAGER_HOSTNAME}' >> $HOME/.config/fish/config.fish
+    "
+  end
+
 end
