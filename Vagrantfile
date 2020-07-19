@@ -71,4 +71,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "scripts/settings.sh", privileged: false
   config.vm.provision "shell", path: "scripts/asdf_install.sh", privileged: false
   config.vm.provision "shell", path: "scripts/omf_install.sh", privileged: false
+  config.vm.provision "shell", path: "scripts/nodejs_install.sh", privileged: false
+  config.vm.provision "shell", path: "scripts/nvim_install.sh", privileged: false
 end
